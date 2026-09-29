@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Fall Limited Edition Sneakers — interactive product gallery and shopping cart."
+    />
+    <title>Sneakers | Fall Limited Edition</title>
+    <link rel="icon" href="images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#product">Skip to product</a>
+    <header class="header">
+      <button
+        class="icon menu-toggle"
+        aria-label="Open menu"
+        aria-haspopup="dialog"
+      >
+        <img src="images/icon-menu.svg" alt="" /></button
+      ><a class="brand" href="./" aria-label="Sneakers home"
+        ><img src="images/logo.svg" alt="sneakers" width="138" height="20"
+      /></a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#product">Collections</a><a href="#product">Men</a
+        ><a href="#product">Women</a><a href="#attribution">About</a
+        ><a href="https://www.frontendmentor.io">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button
+          class="icon cart-toggle"
+          aria-label="Shopping cart, 0 items"
+          aria-expanded="false"
+          aria-controls="cart"
+        >
+          <img src="images/icon-cart.svg" alt="" /><span class="badge" hidden
+            >0</span
+          ></button
+        ><img
+          class="avatar"
+          src="images/image-avatar.png"
+          alt="Customer avatar"
+          width="50"
+          height="50"
+        />
+      </div>
+      <section id="cart" class="cart" aria-labelledby="cart-title" hidden>
+        <h2 id="cart-title">Cart</h2>
+        <div class="cart-content">
+          <p class="empty-cart">Your cart is empty.</p>
+          <div class="filled-cart" hidden>
+            <div class="cart-item">
+              <img
+                class="cart-thumbnail"
+                src="images/image-product-1-thumbnail.jpg"
+                alt="Fall Limited Edition Sneakers"
+              />
+              <p>
+                Fall Limited Edition Sneakers<br /><span
+                  class="cart-calculation"
+                ></span>
+                <strong class="cart-total"></strong>
+              </p>
+              <button
+                class="icon remove-item"
+                aria-label="Remove sneakers from cart"
+              >
+                <img src="images/icon-delete.svg" alt="" />
+              </button>
+            </div>
+            <button class="primary checkout">Checkout</button>
+            <p class="checkout-note" role="status" hidden>
+              This is a demo store. No payment will be taken.
+            </p>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main id="product" class="product">
+      <section class="gallery" aria-label="Product gallery">
+        <div class="image-stage">
+          <button class="open-lightbox" aria-label="Open product image gallery">
+            <img
+              id="product-image"
+              class="product-image"
+              src="images/image-product-1.jpg"
+              alt="Cream sneakers against an orange background"
+              width="1000"
+              height="1000"
+            /></button
+          ><button
+            class="arrow previous mobile-arrow"
+            aria-label="Previous product image"
+          >
+            <img src="images/icon-previous.svg" alt="" /></button
+          ><button
+            class="arrow next mobile-arrow"
+            aria-label="Next product image"
+          >
+            <img src="images/icon-next.svg" alt="" />
+          </button>
+        </div>
+        <div class="thumbnails" aria-label="Choose product image"></div>
+      </section>
+      <section class="details" aria-labelledby="product-title">
+        <p class="eyebrow">Sneaker Company</p>
+        <h1 id="product-title">Fall Limited Edition Sneakers</h1>
+        <p class="description">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </p>
+        <div class="pricing">
+          <div class="current-price">
+            <strong>$125.00</strong
+            ><span class="discount"
+              >50%<span class="sr-only"> discount</span></span
+            >
+          </div>
+          <del><span class="sr-only">Original price </span>$250.00</del>
+        </div>
+        <div class="purchase">
+          <div class="quantity" role="group" aria-label="Quantity">
+            <button class="icon decrease" aria-label="Decrease quantity">
+              <img src="images/icon-minus.svg" alt="" /></button
+            ><output id="quantity" aria-label="Selected quantity">0</output
+            ><button class="icon increase" aria-label="Increase quantity">
+              <img src="images/icon-plus.svg" alt="" />
+            </button>
+          </div>
+          <button class="primary add-to-cart">
+            <img src="images/icon-cart.svg" alt="" />Add to cart
+          </button>
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+    <footer id="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6"
+        >Frontend Mentor</a
+      >. Built by <a href="https://github.com/huang75u">huang75u</a>.
+    </footer>
+    <dialog class="lightbox" aria-label="Product image gallery">
+      <button class="icon close-lightbox" aria-label="Close image gallery">
+        <img src="images/icon-close.svg" alt="" />
+      </button>
+      <div class="image-stage">
+        <img
+          class="lightbox-image"
+          src="images/image-product-1.jpg"
+          alt="Cream sneakers against an orange background"
+          width="1000"
+          height="1000"
+        /><button class="arrow previous" aria-label="Previous image">
+          <img src="images/icon-previous.svg" alt="" /></button
+        ><button class="arrow next" aria-label="Next image">
+          <img src="images/icon-next.svg" alt="" />
+        </button>
+      </div>
+      <div class="thumbnails" aria-label="Choose enlarged image"></div>
+    </dialog>
+    <dialog class="mobile-menu" aria-label="Navigation menu">
+      <button class="icon close-menu" aria-label="Close menu">
+        <img src="images/icon-close.svg" alt="" />
+      </button>
+      <nav aria-label="Mobile navigation">
+        <a href="#product">Collections</a><a href="#product">Men</a
+        ><a href="#product">Women</a><a href="#attribution">About</a
+        ><a href="https://www.frontendmentor.io">Contact</a>
+      </nav>
+    </dialog>
+  </body>
+</html>

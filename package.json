@@ -1,0 +1,10 @@
+{
+  "name": "frontend-mentor-ecommerce-product-page",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend Mentor responsive sneakers product page",
+  "scripts": {
+    "start": "node scripts/serve.cjs",
+    "check": "node --check app.js"
+  }
+}
